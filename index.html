@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meme God</title>
+    <link rel="stylesheet" href="styles1.css">
+</head>
+<body>
+    <h1>Meme God - Ài ố sì mà</h1>
+
+    <!-- Meme 1: Tải não của bạn -->
+    <div class="meme">
+        <h2>Tải não của bạn về nếu bạn không có não</h2>
+        <button onclick="downloadBrain()">Tải não về</button>
+        <a id="download-link" class="hidden" href="brain.zip" download="brain.zip"></a>
+    </div>
+
+    <!-- Meme 2: Giết người đẹp trai nhất thế giới -->
+    <div class="meme">
+        <h2>Ấn nút này để giết người đẹp trai nhất thế giới</h2>
+        <button onclick="killHandsome()">Bấm vào đây để giết</button>
+        <p id="handsome-text" class="hidden">Ôi không, bạn định ám sát tôi (chủ trang web này) sao 🤯🤯🤯?</p>
+    </div>
+
+    <!-- Meme 3: Gõ 5 chữ bất kỳ để thành hacker -->
+    <div class="meme">
+        <h2>Gõ 5 chữ bất kỳ sẽ thành hacker</h2>
+        <input id="hacker-input" type="text" maxlength="5" placeholder="Gõ ở đây">
+        <button onclick="becomeHacker()">Xác nhận</button>
+        <p id="hacker-text" class="hidden">Bạn vừa hack NASA thành công! 😎💻</p>
+    </div>
+
+    <!-- Meme 4: Đặt câu hỏi ngu ngốc -->
+    <div class="meme">
+        <h2>Đặt câu hỏi ngu ngốc và nhận câu trả lời nghiêm túc</h2>
+        <input id="stupid-question" type="text" placeholder="Viết câu hỏi ngu ngốc ở đây">
+        <button onclick="answerStupid()">Hỏi</button>
+        <p id="stupid-answer" class="hidden">Câu trả lời là: 42 🤔</p>
+    </div>
+
+    <!-- Meme 5: Tạo meme ngẫu nhiên -->
+    <div class="meme">
+        <h2>Tạo meme ngẫu nhiên</h2>
+        <button onclick="generateMeme()">Tạo meme mới</button>
+        <p id="random-meme"></p>
+    </div>
+
+    <!-- Meme 6: Đoán tuổi của bạn -->
+    <div class="meme">
+        <h2>Đoán tuổi của bạn</h2>
+        <button onclick="guessAge()">Đoán tuổi</button>
+        <p id="age-guess" class="hidden">Tôi đoán bạn khoảng 18 tuổi! 👶🧓</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
