@@ -6,67 +6,73 @@ body, h1, h2, h3, p, div, button {
 }
 
 body {
-    font-family: 'Comic Sans MS', sans-serif;
-    background-color: #f0f8ff;
+    font-family: 'Arial', sans-serif;
+    background-color: #f7f7f7;
     color: #333;
     text-align: center;
-    padding: 20px;
+    padding: 30px;
+    transition: background-color 0.5s;
 }
 
-/* Styling for each meme section */
+/* Styling for meme sections */
 .meme {
-    background-color: #ffe680;
-    border-radius: 10px;
+    background-color: #ffffff;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
     padding: 20px;
     margin: 20px 0;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s;
 }
 
 .meme:hover {
-    transform: translateY(-5px) scale(1.05);
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
 }
 
 /* Heading styles */
 .meme h3 {
-    font-size: 24px;
-    color: #ff4500;
+    font-size: 22px;
+    color: #ff5722;
     margin-bottom: 15px;
+    font-weight: 600;
 }
 
 /* Button styles */
 button {
-    background-color: #ff6347;
+    background-color: #ff5722;
     color: white;
-    font-size: 18px;
+    font-size: 16px;
+    font-weight: bold;
     border: none;
-    padding: 10px 20px;
+    padding: 12px 24px;
     border-radius: 5px;
     cursor: pointer;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s, transform 0.3s;
+    transition: background-color 0.3s, transform 0.2s;
+    margin-top: 15px;
 }
 
 button:hover {
-    background-color: #ff4500;
-    transform: translateY(-2px);
+    background-color: #e64a19;
 }
 
-/* Funny animations for buttons */
 button:active {
-    background-color: #ff4500;
-    transform: translateY(2px) scale(0.98);
+    transform: scale(0.97);
 }
 
 /* Message text styles */
 #million-message, #age-message, #internet-message {
-    font-size: 18px;
+    font-size: 16px;
     margin-top: 15px;
-    color: #ff4500;
-    font-weight: bold;
+    color: #ff5722;
+    font-weight: 600;
 }
 
 /* Special shake animation */
+.shake {
+    animation: shake 0.5s;
+}
+
 @keyframes shake {
     0% { transform: translate(1px, 1px) rotate(0deg); }
     10% { transform: translate(-1px, -2px) rotate(-1deg); }
@@ -81,17 +87,13 @@ button:active {
     100% { transform: translate(1px, -2px) rotate(-1deg); }
 }
 
-.shake {
-    animation: shake 0.5s;
-}
-
 /* Style for future image */
 #future-image {
-    width: 250px;
+    width: 200px;
     margin-top: 20px;
-    border: 4px solid #ff4500;
+    border: 4px solid #ff5722;
     border-radius: 50%;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s;
 }
 
@@ -99,9 +101,14 @@ button:active {
     transform: scale(1.2) rotate(360deg);
 }
 
-/* Styling for full blackout effect */
+/* Styling for blackout effect */
 body.blackout {
     background-color: #000;
     color: white;
     transition: background-color 1s, color 1s;
+}
+
+h1 {
+    font-size: 28px;
+    color: #555;
 }
