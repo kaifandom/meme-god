@@ -43,3 +43,51 @@ function guessAge() {
     ageText.innerText = "Tôi đoán bạn khoảng " + (Math.floor(Math.random() * 40) + 10) + " tuổi! 👶🧓";
     ageText.classList.remove('hidden');
 }
+
+// Đăng ký tài khoản mới
+function signup() {
+  const email = document.getElementById("email").value;
+  const password = document.getElementById("password").value;
+
+  auth.createUserWithEmailAndPassword(email, password)
+    .then((userCredential) => {
+      console.log("Đăng ký thành công:", userCredential.user);
+      alert("Đăng ký thành công!");
+    })
+    .catch((error) => {
+      console.error("Lỗi đăng ký:", error.message);
+      alert(error.message);
+    });
+}
+
+// Đăng nhập người dùng
+function login() {
+  const email = document.getElementById("email").value;
+  const password = document.getElementById("password").value;
+
+  auth.signInWithEmailAndPassword(email, password)
+    .then((userCredential) => {
+      const user = userCredential.user;
+      console.log("Đăng nhập thành công:", user);
+      document.getElementById("login-form").style.display = "none";
+      document.getElementById("user-info").style.display = "block";
+      document.getElementById("user-email").innerText = `Xin chào, ${user.email}`;
+    })
+    .catch((error) => {
+      console.error("Lỗi đăng nhập:", error.message);
+      alert(error.message);
+    });
+}
+
+// Đăng xuất
+function logout() {
+  auth.signOut()
+    .then(() => {
+      console.log("Đăng xuất thành công");
+      document.getElementById("login-form").style.display = "block";
+      document.getElementById("user-info").style.display = "none";
+    })
+    .catch((error) => {
+      console.error("Lỗi đăng xuất:", error.message);
+    });
+}
