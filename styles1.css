@@ -1,61 +1,107 @@
+/* Reset some basic elements */
+body, h1, h2, h3, p, div, button {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     font-family: 'Comic Sans MS', sans-serif;
-    background-color: #f0f0f5;
+    background-color: #f0f8ff;
     color: #333;
     text-align: center;
-    margin: 0;
     padding: 20px;
 }
 
-h1 {
-    color: #ff6600;
-    margin-bottom: 30px;
-}
-
+/* Styling for each meme section */
 .meme {
-    margin: 20px auto;
-    padding: 20px;
-    background-color: #ffffff;
+    background-color: #ffe680;
     border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    max-width: 600px;
-    transition: transform 0.2s ease;
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
 }
 
 .meme:hover {
-    transform: scale(1.05);
+    transform: translateY(-5px) scale(1.05);
 }
 
-.meme button {
-    background-color: #ff6600;
-    color: #ffffff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.2s ease;
+/* Heading styles */
+.meme h3 {
+    font-size: 24px;
+    color: #ff4500;
+    margin-bottom: 15px;
 }
 
-.meme button:hover {
-    background-color: #ff4500;
-}
-
-input {
-    padding: 10px;
-    border: 2px solid #ff6600;
-    border-radius: 5px;
-    width: 70%;
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-
-.hidden {
-    display: none;
-}
-
-p {
-    margin-top: 15px;
+/* Button styles */
+button {
+    background-color: #ff6347;
+    color: white;
     font-size: 18px;
-    color: #333;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+button:hover {
+    background-color: #ff4500;
+    transform: translateY(-2px);
+}
+
+/* Funny animations for buttons */
+button:active {
+    background-color: #ff4500;
+    transform: translateY(2px) scale(0.98);
+}
+
+/* Message text styles */
+#million-message, #age-message, #internet-message {
+    font-size: 18px;
+    margin-top: 15px;
+    color: #ff4500;
+    font-weight: bold;
+}
+
+/* Special shake animation */
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+.shake {
+    animation: shake 0.5s;
+}
+
+/* Style for future image */
+#future-image {
+    width: 250px;
+    margin-top: 20px;
+    border: 4px solid #ff4500;
+    border-radius: 50%;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+}
+
+#future-image:hover {
+    transform: scale(1.2) rotate(360deg);
+}
+
+/* Styling for full blackout effect */
+body.blackout {
+    background-color: #000;
+    color: white;
+    transition: background-color 1s, color 1s;
 }
