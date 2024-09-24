@@ -54,6 +54,93 @@
         <p id="age-guess" class="hidden">Tôi đoán bạn khoảng 18 tuổi! 👶🧓</p>
     </div>
 
+    <div class="meme">
+    <h3>Ấn nút này để nhận 1 triệu đô la</h3>
+    <button onclick="getMillion()">Nhận tiền ngay</button>
+    <p id="million-message"></p>
+</div>
+
+<script>
+    function getMillion() {
+        document.getElementById("million-message").textContent = "Ôi không, tiền của bạn đã bốc hơi mất rồi!";
+        document.body.classList.add("shake");
+        setTimeout(() => document.body.classList.remove("shake"), 500);
+    }
+</script>
+
+<style>
+    .shake {
+        animation: shake 0.5s;
+    }
+    @keyframes shake {
+        0% { transform: translate(1px, 1px) rotate(0deg); }
+        10% { transform: translate(-1px, -2px) rotate(-1deg); }
+        20% { transform: translate(-3px, 0px) rotate(1deg); }
+        30% { transform: translate(3px, 2px) rotate(0deg); }
+        40% { transform: translate(1px, -1px) rotate(1deg); }
+        50% { transform: translate(-1px, 2px) rotate(-1deg); }
+        60% { transform: translate(-3px, 1px) rotate(0deg); }
+        70% { transform: translate(3px, 1px) rotate(-1deg); }
+        80% { transform: translate(-1px, -1px) rotate(1deg); }
+        90% { transform: translate(1px, 2px) rotate(0deg); }
+        100% { transform: translate(1px, -2px) rotate(-1deg); }
+    }
+</style>
+
+    <div class="meme">
+    <h3>Tăng 1 năm tuổi thọ bằng cách nhấn nút này</h3>
+    <button onclick="increaseAge()">Nhấn để tăng tuổi thọ</button>
+    <p id="age-message"></p>
+</div>
+
+<script>
+    function increaseAge() {
+        document.getElementById("age-message").textContent = "Tuổi thọ của bạn đã giảm đi 10 năm thay vì tăng! 😱";
+    }
+</script>
+
+    <div class="meme">
+    <h3>Tăng tốc độ internet lên gấp đôi</h3>
+    <button onclick="increaseInternetSpeed()">Nhấn để tăng tốc độ</button>
+    <p id="internet-message"></p>
+</div>
+
+<script>
+    function increaseInternetSpeed() {
+        document.getElementById("internet-message").textContent = "Bạn đã bị giới hạn băng thông, tốc độ giảm xuống 56kbps!";
+    }
+</script>
+
+    <div class="meme">
+    <h3>Nhấn để làm mới cuộc sống của bạn</h3>
+    <button onclick="refreshLife()">Làm mới ngay</button>
+</div>
+
+<script>
+    function refreshLife() {
+        document.body.style.backgroundColor = "black";
+        document.body.innerHTML = "<h1 style='color: red; text-align: center;'>Bạn đã làm mới cuộc sống... tạm biệt thế giới!</h1>";
+    }
+</script>
+
+    <div class="meme">
+    <h3>Nhấn để xem bạn là ai trong 10 năm tới</h3>
+    <button onclick="showFuture()">Xem tương lai</button>
+    <img id="future-image" class="hidden" src="your_image_url" alt="Future You">
+</div>
+
+<script>
+    function showFuture() {
+        document.getElementById("future-image").classList.remove("hidden");
+    }
+</script>
+
+<style>
+    .hidden {
+        display: none;
+    }
+</style>
+
     <script src="script.js"></script>
  
 </body>
