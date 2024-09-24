@@ -7,6 +7,19 @@
     <link rel="stylesheet" href="styles1.css">
 </head>
 <body>
+    <div id="login-form">
+  <h2>Đăng nhập GodAct</h2>
+  <input type="email" id="email" placeholder="Email" />
+  <input type="password" id="password" placeholder="Password" />
+  <button onclick="login()">Đăng nhập</button>
+  <button onclick="signup()">Đăng ký</button>
+</div>
+
+<div id="user-info" style="display:none;">
+  <p id="user-email"></p>
+  <button onclick="logout()">Đăng xuất</button>
+</div>
+
     <h1>Meme God - Ài ố sì mà</h1>
 
     <!-- Meme 1: Tải não của bạn -->
